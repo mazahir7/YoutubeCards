@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Card</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <button class="add-card">Add Card</button>
+
+  <div class="input-container">
+    <div>
+      <label for="video-title">Video Title :</label>
+      <input type="text" id="video-title">
+    </div>
+
+    <div>
+      <label for="channel-name">channel Name :</label>
+      <input type="text" id="channel-name">
+    </div>
+
+    <div>
+      <label for="img-url">Image URL :</label>
+      <input type="text" id="img-url">
+    </div>
+
+    <div>
+      <label for="views">Views :</label>
+      <input type="number" id="views">
+    </div>
+
+    <div>
+      <label for="day">Release Day :</label>
+      <input type="datetime-local" id="day">
+    </div>
+
+    <div>
+      <label for="duration">Duration (in minutes):</label>
+      <input type="number" id="duration" placeholder="75 min (1hr 15 mins)">
+    </div>
+
+
+    <button class="add-details">Add Card</button>
+    <span class="close">
+      <span class=" pole left"></span>
+      <span class=" pole right"></span>
+    </span>
+  </div>
+
+
+  <div class="card-container">
+
+    <div class="card">
+      <!-- card left side -->
+      <div class="card-img">
+        <img src="images/card-img.jpg" alt="thumbnail">
+        <div class="video-time">
+          <span class="time">12:23</span>
+        </div>
+      </div>
+
+      <!-- card right side -->
+      <div class="card-text">
+        <h3 class="title">JavaScript Exercise 13 - Dynamic Website Builder | Sigma Web Development Course - Tutorial #73
+        </h3>
+
+        <div class="channel-name">
+          <span>CodeWithHarry</span> <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="video-details">
+          <div class="views">
+            <span class="view-number">123K</span>
+            <span>views</span>
+          </div>
+
+          <div class="dot"></div>
+
+          <div class="video-date">10 days ago</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

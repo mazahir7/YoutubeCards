@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*:focus,
+*:focus-visible {
+	outline: none;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+	background-color: #ffd60a;
+}
+
+/* Input Container */
+
+.add-card {
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	background-color: #001d3d;
+	color: #ffd60a;
+	font-weight: bold;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 6px;
+	transition: all 0.3s ease;
+}
+
+.add-card:hover {
+	background-color: #222;
+}
+
+.add-card:active {
+	transform: translateX(-50%) scale(0.96);
+}
+
+.input-container {
+	position: fixed;
+	top: 50%;
+	left: 250%;
+	transform: translate(-50%, -50%);
+	border-radius: 12px;
+	border: 2px #000 solid;
+	background-color: #ffd60a;
+	box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+	color: #000;
+	display: flex;
+	flex-direction: column;
+
+	gap: 2rem;
+
+	padding: 3rem 8rem;
+	font-size: 2rem;
+	/* width: 50%; */
+	display: none;
+
+	z-index: 999;
+	transition: all 0.5s ease-in-out;
+}
+
+.input-container div {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: fit-content;
+	/* margin-bottom: 2rem; */
+	/* margin-left: 5rem; */
+}
+
+input {
+	color: inherit;
+	border: none;
+	border-bottom: #000 solid 1px;
+	/* width: 40%; */
+	background-color: transparent;
+	/* margin-top: 5px; */
+	font-family: inherit;
+	font-size: 2rem;
+}
+
+.add-details {
+	border: 2px #000 solid;
+	background: transparent;
+	width: fit-content;
+	margin: 1rem auto;
+	padding: 1rem 3rem;
+	transition: all 0.3s ease;
+	font-size: 2rem;
+	font-weight: bold;
+	border-radius: 9px;
+	box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.add-details:hover {
+	background-color: #999;
+}
+
+.add-details:active {
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+	transform: scale(0.96);
+}
+
+.close {
+	display: inline-block;
+	background-color: #000;
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	border-radius: 3px;
+}
+
+.pole {
+	display: inline-block;
+	background-color: #fff;
+	width: 3px;
+	height: 2.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.pole.left {
+	transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.pole.right {
+	transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Card */
+.card-container {
+	background-color: transparent;
+	overflow-x: hidden;
+
+	margin: 12rem 0rem 2rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.card {
+	/* overflow: hidden; */
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 0.8rem;
+	background-color: #000;
+	border-radius: 14px;
+	/* width: 70rem; */
+	margin: 2rem 1rem 4rem;
+}
+
+.card-img {
+	position: relative;
+	border-radius: 14px 0 0 14px;
+	overflow: hidden;
+}
+
+.card-img img {
+	height: 100%;
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+.video-time {
+	position: absolute;
+	right: 2%;
+	bottom: 3%;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+.video-time .time {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.card-text {
+	color: #fff;
+	padding: 1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.title {
+	font-size: 1.8rem;
+	line-height: 1.5;
+}
+
+.channel-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.4rem;
+	margin: 1.4rem 0;
+	letter-spacing: 1px;
+}
+
+.channel-name i {
+	background-color: #ddd;
+	font-size: 1.1rem;
+	padding: 2px 3px;
+	border-radius: 50%;
+	color: #222;
+}
+
+.video-details {
+	display: flex;
+	font-size: 1.2rem;
+	gap: 1rem;
+}
+
+.views span:last-child,
+.view-number {
+	letter-spacing: 1px;
+}
+
+.dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ddd;
+	margin-top: 7px;
+}
+
+/* Media Query */
+
+@media (max-width: 78em) {
+	.card-container {
+		grid-template-columns: 1fr;
+	}
+
+	.card-text {
+		padding-top: 3rem;
+	}
+}
